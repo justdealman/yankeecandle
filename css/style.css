@@ -593,6 +593,11 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	color:#472244;
 	background:#ffffff;
 	margin:20px 0 6px;
+	-webkit-transition:background 0.1s ease;
+	transition:background 0.1s ease;
+}
+.intro__elem .link:hover {
+	background-color:rgba(255,255,255,0.9);
 }
 .intro__benefits {
 	width:1170px;
@@ -671,6 +676,11 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	margin:0 0 30px;
 	background:#ffffff;
 	border:3px solid #f4f4f4;
+	-webkit-transition:background-color 0.2s ease;
+	transition:background-color 0.2s ease;
+}
+.categories__catalog:hover {
+	background-color:#f4f4f4;
 }
 .categories__catalog h3 {
 	color:#3e3e3e;
@@ -715,7 +725,8 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	margin:0 0 30px;
 	background:#f4f4f4;
 }
-.categories__elem:before {
+.categories__elem:before,
+.intro__elem_zoom:before {
 	content:'';
 	position:absolute;
 	left:0;
@@ -727,7 +738,8 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	transition:opacity 0.2s ease;
 	opacity:0;
 }
-.categories__elem:after {
+.categories__elem:after,
+.intro__elem_zoom:after {
 	content:'';
 	position:absolute;
 	left:50%;
@@ -744,7 +756,9 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	opacity:0;
 }
 .categories__elem:hover:before,
-.categories__elem:hover:after {
+.categories__elem:hover:after,
+.intro__elem_zoom:hover:before,
+.intro__elem_zoom:hover:after {
 	opacity:1;
 }
 .categories__elem_tall {
