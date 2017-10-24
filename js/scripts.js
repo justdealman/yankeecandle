@@ -101,6 +101,11 @@ $(function() {
 			$(this).width(Math.ceil($(this).parent().width()));
 		});
 	}
+	function setMinContentHeight() {
+		$('.wrapper').css({
+			'min-height': $(window).height()-$('.footer').outerHeight()
+		});
+	}
 	function startApp() {
 		detectDevice();
 		roundSelect();
@@ -126,6 +131,7 @@ $(function() {
 			}
 		}
 		setRatio();
+		setMinContentHeight();
 	}
 	startApp();
 	var lastWidth = $(window).width();
