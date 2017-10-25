@@ -2028,6 +2028,9 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	padding:0;
 	margin:0;
 }
+.basket__table h5 span {
+	display:none;
+}
 .basket__table h5 em {
 	font-style:normal;
 	margin:1px 0 -1px 2px;
@@ -2082,7 +2085,6 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 }
 .basket__order h4 span {
 	display:block;
-	max-width:202px;
 	margin:0 auto;
 }
 .basket__order .item {
@@ -2091,7 +2093,6 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	background:#f4f4f4;
 }
 .basket__order .item p {
-	max-width:202px;
 	color:#3f4b52;
 	font-size:14px;
 	line-height:21px;
@@ -2120,7 +2121,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	text-transform:uppercase;
 	cursor:pointer;
 	padding:22px;
-	margin:0 auto;
+	margin:0;
 	background:#da983a;
 	-webkit-transition:background 0.1s ease;
 	transition:background 0.1s ease;
@@ -2653,7 +2654,34 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 		margin:0 auto 2px;
 		-webkit-transform:translateX(13px);
 		transform:translateX(13px);
-	}	
+	}
+	.basket {
+		margin:-4px 0 -13px;
+	}
+	.basket__table {
+		margin:0 0 27px;
+	}
+	.basket__table th {
+		padding:17px 10px 20px;
+	}
+	.basket__table td {
+		padding:15px 10px;
+	}
+	.basket__table_price {
+		width:14%;
+	}
+	.basket__table_quantity {
+		width:20.27%;
+	}
+	.basket__table_total {
+		width:13.35%;
+	}
+	.basket__table_remove {
+		width:46px;
+	}
+	.basket__table h5 {
+		white-space:nowrap;
+	}
 }
 @media all and (max-width:779px) {
 	.panel {
@@ -3057,13 +3085,9 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 		margin:0 0 10px;
 	}
 	.basket__lc {
-		width:calc(100% + 30px);
-		overflow-x:scroll;
-		padding:0 15px 15px;
-		margin:0 0 20px -15px;
+		margin:0 0 20px;
 	}
 	.basket__table {
-		width:720px;
 		margin:0 0 10px;
 	}
 	.card__gallery {
@@ -3165,5 +3189,87 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	}
 	.catalog__rc .pages-e {
 		margin:30px 0 20px;
+	}
+	.basket {
+		margin:-1px 0 14px;
+	}
+	.basket__lc {
+		margin:0 0 -16px;
+	}
+	.basket__table {
+		margin:0;
+		border-bottom-width:0;
+	}
+	.basket__table thead {
+		display:none;
+	}
+	.basket__table tr {
+		position:relative;
+		display:block;
+	}
+	.basket__table tr:after {
+		content:'';
+		position:absolute;
+		left:-1px;
+		bottom:1px;
+		z-index:2;
+		width:calc(100% + 2px);
+		height:34px;
+		background:#ffffff;
+		border-top:1px solid #f4f4f4;
+	}
+	.basket__table tr:last-child:after {
+		bottom:0;
+		height:35px;
+	}
+	.basket__table td {
+		display:block;
+		padding:0 4.86% 0 42%;
+		border-top-width:0;
+		border-bottom-width:0;
+	}
+	.basket__table td:first-child {
+		padding-top:27px;
+	}
+	.basket__table td:last-child {
+		height:50px;
+		border-bottom-width:1px;
+	}
+	.basket__table h3 {
+		margin:0 0 7px;
+	}
+	.basket__table h5 {
+		margin:0 0 10px;
+	}
+	.basket__table h5 span {
+		display:block;
+		color:#717171;
+		font-size:13px;
+		line-height:21px;
+		font-weight:normal;
+		font-family:'Open Sans', sans-serif;
+		letter-spacing:0;
+	}
+	.basket__table .pic {
+		position:absolute;
+		left:5.2%;
+		top:7px;
+		margin:0;
+	}
+	.basket__table .quantity-e {
+		margin:0 0 8px;
+	}
+	.basket__table .remove {
+		position:absolute;
+		right:-1px;
+		top:-16px;
+		z-index:3;
+	}
+	.basket__rc {
+		position:relative;
+		z-index:4;
+	}
+	.basket__order button {
+		max-width:none;
 	}
 }
